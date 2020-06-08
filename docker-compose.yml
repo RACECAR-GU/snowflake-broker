@@ -1,0 +1,8 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: broker -addr ":8080" -disable-tls -disable-geoip
+        ports:
+            - "8080:8080"
+        image: broker
